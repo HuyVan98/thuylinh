@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Animation</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .text {
+        font-size: 36px;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+      }
+      form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      button {
+        margin-right: 10px;
+      }
+
+      form.hidden {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s, transform 0.5s;
+      }
+
+      .heart-image {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+
+      form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        transition: transform 1s, opacity 1s;
+      }
+
+      form.hidden {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+      }
+
+      .show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .show img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="show">
+      <img src="image1.png" alt="1" />
+      <img src="image2.png" alt="2" />
+      <img src="image3.jpg" alt="3" />
+      <img src="image4.jpg" alt="4" />
+      <img src="image5.jpg" alt="5" />
+    </div>
+
+    <div class="text">t</div>
+    <div class="text">ô</div>
+    <div class="text">i</div>
+    <div class="text">&nbsp;</div>
+    <div class="text">y</div>
+    <div class="text">ê</div>
+    <div class="text">u</div>
+    <div class="text">&nbsp;</div>
+    <div class="text">e</div>
+    <div class="text">m</div>
+  </body>
+  <script>
+    const slideshow = document.querySelector(".show");
+    const images = slideshow.querySelectorAll("img");
+    let currentIndex_image = 0;
+
+    const textElements = document.querySelectorAll(".text");
+    let currentIndex = 0;
+
+    function showNextImage() {
+      // images[currentIndex_image].style.opacity = "0";
+
+      // Đợi 1 giây cho hiệu ứng opacity hoàn thành
+      setTimeout(() => {
+        images[currentIndex_image].style.display = "none";
+        currentIndex_image = (currentIndex_image + 1) % images.length;
+
+        if (currentIndex_image === 0) {
+          // alert("Slide show completed!");
+          animateText(currentIndex);
+        } else {
+          images[currentIndex_image].style.opacity = "1";
+          images[currentIndex_image].style.display = "block";
+          showNextImage(); // Gọi lại hàm để hiển thị hình ảnh tiếp theo
+        }
+      }, 3000);
+    }
+
+    images[currentIndex_image].style.opacity = "1";
+    images[currentIndex_image].style.display = "block";
+    showNextImage();
+
+    function animateText(index) {
+      if (index >= textElements.length) {
+        setTimeout(() => {
+          // Animate text elements out and show the form
+          for (const textElement of textElements) {
+            textElement.style.opacity = "0";
+            textElement.style.transform = "translateY(-50px)";
+          }
+
+          setTimeout(() => {
+            const form = document.createElement("form");
+            form.innerHTML = `
+          <label for="answer">em đồng ý nhé</label>
+          <button type="button" id="disagreeButton">Không đồng ý</button>
+          <button type="button" id="agreeButton">Đồng ý</button>
+        `;
+            document.body.appendChild(form);
+
+            const agreeButton = document.getElementById("agreeButton");
+            const disagreeButton = document.getElementById("disagreeButton");
+
+            agreeButton.addEventListener("click", () => {
+              // Handle agree action here
+              // alert("Bạn đã đồng ý.");
+            });
+
+            disagreeButton.addEventListener("click", () => {
+              // Handle disagree action here
+              //   alert('Bạn không đồng ý.');
+            });
+            disagreeButton.addEventListener("click", () => {
+              // Handle disagree action here
+              const newPositionX =
+                Math.random() * (window.innerWidth - form.offsetWidth);
+              const newPositionY =
+                Math.random() * (window.innerHeight - form.offsetHeight);
+
+              form.style.left = newPositionX + "px";
+              form.style.top = newPositionY + "px";
+            });
+
+            agreeButton.addEventListener("click", () => {
+              // Handle agree action here
+              form.classList.add("hidden");
+
+              setTimeout(() => {
+                form.style.display = "none";
+                const heartImage = document.createElement("img");
+                heartImage.src =
+                  "https://nhadepso.com/wp-content/uploads/2023/01/hinh-trai-tim-dep_1.jpg"; // Replace with your heart image source
+                heartImage.classList.add("heart-image");
+                document.body.appendChild(heartImage);
+                heartImage.style.display = "block";
+                setTimeout(() => {
+                  //   heartImage.style.display = 'none';
+                }, 2000); // Time before hiding the heart image
+              }, 500); // Delay before hiding the form
+            });
+          }, 500); // Delay before showing the form
+        }, 500); // Delay before animating out the text elements
+        return;
+      }
+
+      textElements[index].style.opacity = "1";
+      textElements[index].style.transform = "translateY(0)";
+
+      setTimeout(() => {
+        animateText(index + 1);
+      }, 500); // Delay between each character
+    }
+
+    // animateText(currentIndex);
+  </script>
+</html>
