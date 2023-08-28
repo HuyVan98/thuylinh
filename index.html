@@ -11,7 +11,10 @@
         align-items: center;
         height: 100vh;
         margin: 0;
-        background-color: #f0f0f0;
+        background-color: #5f5f5f;
+        color: #fff9f9;
+        font-family: system-ui;
+        font-size: 18px;
       }
 
       .text {
@@ -84,9 +87,418 @@
         opacity: 0;
         transition: opacity 1s ease-in-out;
       }
+
+      .head {
+        font-size: 36px;
+        opacity: 0;
+        text-align: center;
+        /* animation: blink 3s cubic-bezier(0.645, 0.045, 0.355, 1) infinite,
+          slideDown 1s 4s cubic-bezier(0.645, 0.045, 0.355, 1) forwards; */
+        position: absolute;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideDown {
+        to {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+      }
+
+      /* 1 */
+      .animation-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+      }
+
+      .text-row {
+        display: flex;
+      }
+
+      .text1 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 1 */
+
+      /* 2 */
+      .animation-container2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+      }
+
+      .text-row-2 {
+        display: flex;
+      }
+
+      .text1-2 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated-2 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 2 */
+
+      /* 3 */
+      .animation-container3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+      }
+
+      .text-row-3 {
+        display: flex;
+      }
+
+      .text1-3 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated-3 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 3 */
+
+      /* 4 */
+      .animation-container4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+      }
+
+      .text-row-4 {
+        display: flex;
+      }
+
+      .text1-4 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated-4 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 4 */
+
+      /* 5 */
+      .animation-container5 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+      }
+
+      .text-row-5 {
+        display: flex;
+      }
+
+      .text1-5 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated-5 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 5 */
+
+      /* 7 */
+      .animation-container7 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+      }
+
+      .text-row-7 {
+        display: flex;
+      }
+
+      .text1-7 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated-7 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 7 */
+
+      /* 8 */
+      .animation-container8 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+        font-size: 17px;
+      }
+
+      .text-row-8 {
+        display: flex;
+      }
+
+      .text1-8 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated-8 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 8 */
+
+      /* 9 */
+      .animation-container9 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+      }
+
+      .text-row-9 {
+        display: flex;
+      }
+
+      .text1-9 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated-9 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 9 */
+
+      /* 10 */
+      .animation-container10 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+      }
+
+      .text-row-10 {
+        display: flex;
+      }
+
+      .text1-10 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated-10 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 10 */
+
+      /* 11 */
+      .animation-container11 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+      }
+
+      .text-row-11 {
+        display: flex;
+      }
+
+      .text1-11 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated-11 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 11 */
+
+      /* 12 */
+      .animation-container12 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+      }
+
+      .text-row-12 {
+        display: flex;
+      }
+
+      .text1-12 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated-12 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 12 */
     </style>
   </head>
   <body>
+    <div class="head" id="textElement">Hi Linh!</div>
+
+    <!-- 1 -->
+    <div class="animation-container">
+      <div class="text-row">
+        <div class="text1">Cậu có nhớ</div>
+      </div>
+      <div class="text-row">
+        <div class="text1">lần đầu chúng mình nói chuyện không?</div>
+      </div>
+    </div>
+    <!-- end 1 -->
+
+    <!-- 2 -->
+
+    <div class="animation-container2">
+      <div class="text-row-2">
+        <div class="text1-2">Tớ cảm thấy</div>
+      </div>
+      <div class="text-row-2">
+        <div class="text1-2">may mắn khi gặp được cậu!</div>
+      </div>
+    </div>
+
+    <!-- end 2 -->
+
+    <!-- 3 -->
+
+    <div class="animation-container3">
+      <div class="text-row-3">
+        <div class="text1-3">Cảm ơn</div>
+      </div>
+      <div class="text-row-3">
+        <div class="text1-3">đã cho tớ gặp được cậu!</div>
+      </div>
+    </div>
+
+    <!-- end 3 -->
+
+    <!-- 4 -->
+
+    <div class="animation-container4">
+      <div class="text-row-4">
+        <div class="text1-4">và</div>
+      </div>
+    </div>
+
+    <!-- end 4 -->
+
+    <!-- 5 -->
+
+    <div class="animation-container5">
+      <div class="text-row-5">
+        <div class="text1-5">Xin lỗi</div>
+      </div>
+      <div class="text-row-5">
+        <div class="text1-5">những lần làm cậu không vui!</div>
+      </div>
+    </div>
+
+    <!-- end 5 -->
+
+    <!-- 6 -->
     <div class="show">
       <img src="image1.png" alt="1" />
       <img src="image2.png" alt="2" />
@@ -94,6 +506,78 @@
       <img src="image4.jpg" alt="4" />
       <img src="image5.jpg" alt="5" />
     </div>
+    <!-- end 6 -->
+
+    <!-- 7 -->
+
+    <div class="animation-container7">
+      <div class="text-row-7">
+        <div class="text1-7">nhưng!</div>
+      </div>
+    </div>
+
+    <!-- end 7 -->
+
+    <!-- 8 -->
+
+    <div class="animation-container8">
+      <div class="text-row-8">
+        <div class="text1-8">Tớ đang cố gắng</div>
+      </div>
+      <div class="text-row-8">
+        <div class="text1-8">
+          và sẽ trở thành phiên bản tốt nhất dành cho cậu!
+        </div>
+      </div>
+    </div>
+
+    <!-- end 8 -->
+
+    <!-- 9 -->
+
+    <div class="animation-container9">
+      <div class="text-row-9">
+        <div class="text1-9">Tớ biết cậu luôn có những lựa chọn khác</div>
+      </div>
+      <div class="text-row-9">
+        <div class="text1-9">nhưng hãy để tớ là lựa chọn đầu tiên nhé!</div>
+      </div>
+    </div>
+
+    <!-- end 9 -->
+
+    <!-- 10 -->
+
+    <div class="animation-container10">
+      <div class="text-row-10">
+        <div class="text1-10">Vì vậy! tớ chỉ muốn nói...</div>
+      </div>
+    </div>
+
+    <!-- end 10 -->
+
+    <!-- 11 -->
+
+    <div class="animation-container11">
+      <div class="text-row-11">
+        <div class="text1-11">Anh thật sự thích em!</div>
+      </div>
+    </div>
+
+    <!-- end 11 -->
+
+    <!-- 12 -->
+
+    <div class="animation-container12">
+      <div class="text-row-12">
+        <div class="text1-12">Em có thể cho chúng mình một cơ hội</div>
+      </div>
+      <div class="text-row-12">
+        <div class="text1-12">để chúng mình không chỉ là bạn bè không?</div>
+      </div>
+    </div>
+
+    <!-- end 12 -->
 
     <div class="text">t</div>
     <div class="text">ô</div>
@@ -107,6 +591,62 @@
     <div class="text">m</div>
   </body>
   <script>
+    const textElement = document.getElementById("textElement");
+
+    function delay(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    async function runAnimations() {
+      const textElement = document.getElementById("textElement");
+
+      // Chạy animation cho textElement
+      textElement.style.animation =
+        "blink 3s cubic-bezier(0.645, 0.045, 0.355, 1) infinite, slideDown 1s 4s cubic-bezier(0.645, 0.045, 0.355, 1) forwards";
+      await delay(5000);
+
+      textElement.style.display = "none";
+
+      // Chạy các animations tiếp theo
+      await animateTextRows(currentRowIndex);
+      await delay(5000);
+
+      await animateTextRows2(currentRowIndex2);
+      await delay(5000);
+
+      await animateTextRows3(currentRowIndex3);
+      await delay(5000);
+
+      await animateTextRows4(currentRowIndex4);
+      await delay(5000);
+
+      await animateTextRows5(currentRowIndex5);
+      await delay(4000);
+
+      await showNextImage();
+      await delay(32000);
+
+      await animateTextRows7(currentRowIndex7);
+      await delay(6000);
+
+      await animateTextRows8(currentRowIndex8);
+      await delay(6000);
+
+      await animateTextRows9(currentRowIndex9);
+      await delay(6000);
+
+      await animateTextRows10(currentRowIndex10);
+      await delay(6000);
+
+      await animateTextRows11(currentRowIndex11);
+      await delay(6000);
+
+      
+      await animateTextRows12(currentRowIndex12);
+    }
+
+    runAnimations();
+
     const slideshow = document.querySelector(".show");
     const images = slideshow.querySelectorAll("img");
     let currentIndex_image = 0;
@@ -115,27 +655,29 @@
     let currentIndex = 0;
 
     function showNextImage() {
-      // images[currentIndex_image].style.opacity = "0";
+      images[currentIndex_image].style.opacity = "1";
 
       // Đợi 1 giây cho hiệu ứng opacity hoàn thành
       setTimeout(() => {
+        images[currentIndex_image].style.opacity = "0";
         images[currentIndex_image].style.display = "none";
         currentIndex_image = (currentIndex_image + 1) % images.length;
 
         if (currentIndex_image === 0) {
           // alert("Slide show completed!");
-          animateText(currentIndex);
+          // show text cu
+          // animateText(currentIndex);
         } else {
           images[currentIndex_image].style.opacity = "1";
           images[currentIndex_image].style.display = "block";
           showNextImage(); // Gọi lại hàm để hiển thị hình ảnh tiếp theo
         }
-      }, 3000);
+      }, 6000);
     }
 
-    images[currentIndex_image].style.opacity = "1";
-    images[currentIndex_image].style.display = "block";
-    showNextImage();
+    // images[currentIndex_image].style.opacity = "1";
+    // images[currentIndex_image].style.display = "block";
+    // showNextImage();
 
     function animateText(index) {
       if (index >= textElements.length) {
@@ -208,6 +750,420 @@
       }, 500); // Delay between each character
     }
 
-    // animateText(currentIndex);
+    // 1
+    const textRows = document.querySelectorAll(".text-row");
+    let currentRowIndex = 0;
+
+    function animateTextRows(index) {
+      if (index >= textRows.length) {
+        return;
+      }
+
+      const textElements = textRows[index].querySelectorAll(".text1");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated");
+
+          // Kiểm tra xem tất cả các phần tử text1 đã được hiển thị
+          if (index === textRows.length - 1 && i === textElements.length - 1) {
+            setTimeout(() => {
+              hideTextRows();
+            }, 4000); // Đợi 1 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows() {
+      for (const textElement of document.querySelectorAll(".text1")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 1
+
+    // 2
+    const textRows2 = document.querySelectorAll(".text-row-2");
+    let currentRowIndex2 = 0;
+
+    function animateTextRows2(index) {
+      if (index >= textRows2.length) {
+        return;
+      }
+
+      const textElements = textRows2[index].querySelectorAll(".text1-2");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated-2");
+
+          // Kiểm tra xem tất cả các phần tử text1-2 đã được hiển thị
+          if (index === textRows2.length - 1 && i === textElements.length - 1) {
+            setTimeout(() => {
+              hideTextRows2();
+            }, 4000); // Đợi 1 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows2(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows2() {
+      for (const textElement of document.querySelectorAll(".text1-2")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 2
+
+    // 3
+    const textRows3 = document.querySelectorAll(".text-row-3");
+    let currentRowIndex3 = 0;
+
+    function animateTextRows3(index) {
+      if (index >= textRows3.length) {
+        return;
+      }
+
+      const textElements = textRows3[index].querySelectorAll(".text1-3");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated-3");
+
+          // Kiểm tra xem tất cả các phần tử text1-3 đã được hiển thị
+          if (index === textRows3.length - 1 && i === textElements.length - 1) {
+            setTimeout(() => {
+              hideTextRows3();
+            }, 4000); // Đợi 2 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows3(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows3() {
+      for (const textElement of document.querySelectorAll(".text1-3")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 3
+
+    // 4
+    const textRows4 = document.querySelectorAll(".text-row-4");
+    let currentRowIndex4 = 0;
+
+    function animateTextRows4(index) {
+      if (index >= textRows4.length) {
+        return;
+      }
+
+      const textElements = textRows4[index].querySelectorAll(".text1-4");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated-4");
+
+          // Kiểm tra xem tất cả các phần tử text1-4 đã được hiển thị
+          if (index === textRows4.length - 1 && i === textElements.length - 1) {
+            setTimeout(() => {
+              hideTextRows4();
+            }, 4000); // Đợi 1 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows4(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows4() {
+      for (const textElement of document.querySelectorAll(".text1-4")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 4
+
+    // 5
+    const textRows5 = document.querySelectorAll(".text-row-5");
+    let currentRowIndex5 = 0;
+
+    function animateTextRows5(index) {
+      if (index >= textRows5.length) {
+        return;
+      }
+
+      const textElements = textRows5[index].querySelectorAll(".text1-5");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated-5");
+
+          // Kiểm tra xem tất cả các phần tử text1-5 đã được hiển thị
+          if (index === textRows5.length - 1 && i === textElements.length - 1) {
+            setTimeout(() => {
+              hideTextRows5();
+            }, 2500); // Đợi 1 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows5(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows5() {
+      for (const textElement of document.querySelectorAll(".text1-5")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 5
+
+    // 7
+    const textRows7 = document.querySelectorAll(".text-row-7");
+    let currentRowIndex7 = 0;
+
+    function animateTextRows7(index) {
+      if (index >= textRows7.length) {
+        return;
+      }
+
+      const textElements = textRows7[index].querySelectorAll(".text1-7");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated-7");
+
+          // Kiểm tra xem tất cả các phần tử text1-7 đã được hiển thị
+          if (index === textRows7.length - 1 && i === textElements.length - 1) {
+            setTimeout(() => {
+              hideTextRows7();
+            }, 4000); // Đợi 1 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows7(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows7() {
+      for (const textElement of document.querySelectorAll(".text1-7")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 7
+
+    // 8
+    const textRows8 = document.querySelectorAll(".text-row-8");
+    let currentRowIndex8 = 0;
+
+    function animateTextRows8(index) {
+      if (index >= textRows8.length) {
+        return;
+      }
+
+      const textElements = textRows8[index].querySelectorAll(".text1-8");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated-8");
+
+          // Kiểm tra xem tất cả các phần tử text1-8 đã được hiển thị
+          if (index === textRows8.length - 1 && i === textElements.length - 1) {
+            setTimeout(() => {
+              hideTextRows8();
+            }, 5000); // Đợi 1 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows8(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows8() {
+      for (const textElement of document.querySelectorAll(".text1-8")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 8
+
+    // 9
+    const textRows9 = document.querySelectorAll(".text-row-9");
+    let currentRowIndex9 = 0;
+
+    function animateTextRows9(index) {
+      if (index >= textRows9.length) {
+        return;
+      }
+
+      const textElements = textRows9[index].querySelectorAll(".text1-9");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated-9");
+
+          // Kiểm tra xem tất cả các phần tử text1-9 đã được hiển thị
+          if (index === textRows9.length - 1 && i === textElements.length - 1) {
+            setTimeout(() => {
+              hideTextRows9();
+            }, 5000); // Đợi 1 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows9(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows9() {
+      for (const textElement of document.querySelectorAll(".text1-9")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 9
+
+    // 10
+    const textRows10 = document.querySelectorAll(".text-row-10");
+    let currentRowIndex10 = 0;
+
+    function animateTextRows10(index) {
+      if (index >= textRows10.length) {
+        return;
+      }
+
+      const textElements = textRows10[index].querySelectorAll(".text1-10");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated-10");
+
+          // Kiểm tra xem tất cả các phần tử text1-10 đã được hiển thị
+          if (
+            index === textRows10.length - 1 &&
+            i === textElements.length - 1
+          ) {
+            setTimeout(() => {
+              hideTextRows10();
+            }, 5000); // Đợi 1 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows10(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows10() {
+      for (const textElement of document.querySelectorAll(".text1-10")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 10
+
+    // 11
+    const textRows11 = document.querySelectorAll(".text-row-11");
+    let currentRowIndex11 = 0;
+
+    function animateTextRows11(index) {
+      if (index >= textRows11.length) {
+        return;
+      }
+
+      const textElements = textRows11[index].querySelectorAll(".text1-11");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated-11");
+
+          // Kiểm tra xem tất cả các phần tử text1-11 đã được hiển thị
+          if (
+            index === textRows11.length - 1 &&
+            i === textElements.length - 1
+          ) {
+            setTimeout(() => {
+              hideTextRows11();
+            }, 5000); // Đợi 1 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows11(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows11() {
+      for (const textElement of document.querySelectorAll(".text1-11")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 11
+
+    // 12
+    const textRows12 = document.querySelectorAll(".text-row-12");
+    let currentRowIndex12 = 0;
+
+    function animateTextRows12(index) {
+      if (index >= textRows12.length) {
+        return;
+      }
+
+      const textElements = textRows12[index].querySelectorAll(".text1-12");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated-12");
+
+          // Kiểm tra xem tất cả các phần tử text1-12 đã được hiển thị
+          if (
+            index === textRows12.length - 1 &&
+            i === textElements.length - 1
+          ) {
+            setTimeout(() => {
+              // hideTextRows12();
+            }, 5000); // Đợi 1 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows12(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows12() {
+      for (const textElement of document.querySelectorAll(".text1-12")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 12
   </script>
 </html>
