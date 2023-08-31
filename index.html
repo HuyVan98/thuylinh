@@ -433,6 +433,35 @@
         transform: translateY(0);
       }
       /* end 12 */
+
+      /* 13 */
+      .animation-container13 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        overflow-wrap: break-word;
+        position: absolute;
+      }
+
+      .text-row-13 {
+        display: flex;
+      }
+
+      .text1-13 {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s, transform 0.5s;
+        margin: 0 3px; /* Điều chỉnh khoảng cách giữa các từ */
+      }
+
+      .animated-13 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* end 13 */
     </style>
   </head>
   <body>
@@ -502,9 +531,8 @@
     <div class="show">
       <img src="image1.png" alt="1" />
       <img src="image2.png" alt="2" />
-      <img src="image3.jpg" alt="3" />
-      <img src="image4.jpg" alt="4" />
-      <img src="image5.jpg" alt="5" />
+      <img src="image3.png" alt="3" />
+      <img src="image4.png" alt="4" />
     </div>
     <!-- end 6 -->
 
@@ -539,9 +567,9 @@
       <div class="text-row-9">
         <div class="text1-9">Tớ biết cậu luôn có những lựa chọn khác</div>
       </div>
-      <div class="text-row-9">
+      <!-- <div class="text-row-9">
         <div class="text1-9">nhưng hãy để tớ là lựa chọn đầu tiên nhé!</div>
-      </div>
+      </div> -->
     </div>
 
     <!-- end 9 -->
@@ -550,7 +578,7 @@
 
     <div class="animation-container10">
       <div class="text-row-10">
-        <div class="text1-10">Vì vậy! tớ chỉ muốn nói...</div>
+        <div class="text1-10">Nhưng! tớ chỉ muốn nói...</div>
       </div>
     </div>
 
@@ -560,7 +588,7 @@
 
     <div class="animation-container11">
       <div class="text-row-11">
-        <div class="text1-11">Anh thật sự thích em!</div>
+        <div class="text1-11">Tớ thật sự thích Linh!</div>
       </div>
     </div>
 
@@ -570,14 +598,27 @@
 
     <div class="animation-container12">
       <div class="text-row-12">
-        <div class="text1-12">Em có thể cho chúng mình một cơ hội</div>
+        <div class="text1-12">Hôm qua làm cậu không vui</div>
       </div>
       <div class="text-row-12">
-        <div class="text1-12">để chúng mình không chỉ là bạn bè không?</div>
+        <div class="text1-12">Nhưng mong cậu hiểu tớ không cố ý!</div>
       </div>
     </div>
 
     <!-- end 12 -->
+
+    <!-- 13 -->
+
+    <div class="animation-container13">
+      <div class="text-row-13">
+        <div class="text1-13">Hôm qua làm cậu phải chờ</div>
+      </div>
+      <div class="text-row-13">
+        <div class="text1-13">Linh có thể cho tớ xin lỗi lần này không!</div>
+      </div>
+    </div>
+
+    <!-- end 13 -->
 
     <div class="text">t</div>
     <div class="text">ô</div>
@@ -624,7 +665,7 @@
       await delay(4000);
 
       await showNextImage();
-      await delay(32000);
+      await delay(25000);
 
       await animateTextRows7(currentRowIndex7);
       await delay(6000);
@@ -643,6 +684,10 @@
 
       
       await animateTextRows12(currentRowIndex12);
+      await delay(8000);
+
+      await animateTextRows13(currentRowIndex13);
+
     }
 
     runAnimations();
@@ -1147,8 +1192,8 @@
             i === textElements.length - 1
           ) {
             setTimeout(() => {
-              // hideTextRows12();
-            }, 5000); // Đợi 1 giây trước khi ẩn đi
+              hideTextRows12();
+            }, 7000); // Đợi 1 giây trước khi ẩn đi
           }
         }, i * 500); // Delay between each element in the row
       }
@@ -1165,5 +1210,46 @@
       }
     }
     // end 12
+
+
+    // 13
+    const textRows13 = document.querySelectorAll(".text-row-13");
+    let currentRowIndex13 = 0;
+
+    function animateTextRows13(index) {
+      if (index >= textRows13.length) {
+        return;
+      }
+
+      const textElements = textRows13[index].querySelectorAll(".text1-13");
+
+      for (let i = 0; i < textElements.length; i++) {
+        setTimeout(() => {
+          textElements[i].classList.add("animated-13");
+
+          // Kiểm tra xem tất cả các phần tử text1-13 đã được hiển thị
+          if (
+            index === textRows13.length - 1 &&
+            i === textElements.length - 1
+          ) {
+            setTimeout(() => {
+              // hideTextRows13();
+            }, 5000); // Đợi 1 giây trước khi ẩn đi
+          }
+        }, i * 500); // Delay between each element in the row
+      }
+
+      setTimeout(() => {
+        animateTextRows13(index + 1);
+      }, textElements.length * 500); // Delay before starting the next row
+    }
+
+    function hideTextRows13() {
+      for (const textElement of document.querySelectorAll(".text1-13")) {
+        textElement.style.opacity = "0";
+        textElement.style.transform = "translateY(-50px)";
+      }
+    }
+    // end 13
   </script>
 </html>
