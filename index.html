@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Text Animation</title>
+    <title>Thùy Linh</title>
     <style>
       body {
         display: flex;
@@ -78,6 +78,27 @@
       }
 
       .show img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+
+      .showtl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .showtl img {
         width: 100%;
         height: auto;
         position: absolute;
@@ -478,6 +499,13 @@
     </div>
     <!-- end 1 -->
 
+    <!-- imagetl1 -->
+    <div class="showtl">
+      <img src="linh1.png" alt="1" />
+      <img src="linh2.png" alt="2" />
+    </div>
+    <!-- end imagetl1 -->
+
     <!-- 2 -->
 
     <div class="animation-container2">
@@ -652,6 +680,9 @@
       await animateTextRows(currentRowIndex);
       await delay(5000);
 
+      await showNextImage2();
+      await delay(13000);
+
       await animateTextRows2(currentRowIndex2);
       await delay(5000);
 
@@ -716,6 +747,31 @@
           images[currentIndex_image].style.opacity = "1";
           images[currentIndex_image].style.display = "block";
           showNextImage(); // Gọi lại hàm để hiển thị hình ảnh tiếp theo
+        }
+      }, 6000);
+    }
+
+    const slideshow2 = document.querySelector(".showtl");
+    const images2 = slideshow2.querySelectorAll("img");
+    let currentIndex_image2 = 0;
+
+    function showNextImage2() {
+      images2[currentIndex_image2].style.opacity = "1";
+
+      // Đợi 1 giây cho hiệu ứng opacity hoàn thành
+      setTimeout(() => {
+        images2[currentIndex_image2].style.opacity = "0";
+        images2[currentIndex_image2].style.display = "none";
+        currentIndex_image2 = (currentIndex_image2 + 1) % images2.length;
+
+        if (currentIndex_image2 === 0) {
+          // alert("Slide show completed!");
+          // show text cu
+          // animateText(currentIndex);
+        } else {
+          images2[currentIndex_image2].style.opacity = "1";
+          images2[currentIndex_image2].style.display = "block";
+          showNextImage2(); // Gọi lại hàm để hiển thị hình ảnh tiếp theo
         }
       }, 6000);
     }
